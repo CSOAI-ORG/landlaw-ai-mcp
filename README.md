@@ -1,54 +1,59 @@
 # LandLaw.AI MCP Server
 
-**UK Property Law Research AI** | Built by [MEOK AI Labs](https://meok.ai)
+> **By [MEOK AI Labs](https://meok.ai)** — Sovereign AI tools for everyone.
 
-MCP server for UK Land Registry searches, planning permission checks, covenant explanations, Stamp Duty calculations, Section 21/8 notices, and right of way analysis.
+UK property law research AI. Search the Land Registry, check planning permissions, explain covenants, calculate Stamp Duty, generate Section 21/8 notices, and analyze rights of way.
+
+[![MCPize](https://img.shields.io/badge/MCPize-Listed-blue)](https://mcpize.com/mcp/landlaw-ai)
+[![MIT License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `search_land_registry` | Search UK Land Registry by address or title number |
-| `check_planning_permission` | Check PD rights and planning requirements for modifications |
-| `explain_covenant` | Explain restrictive/positive covenants in plain English |
-| `calculate_sdlt` | Calculate Stamp Duty Land Tax with FTB relief and surcharges |
-| `draft_section_notice` | Generate Section 21 or Section 8 notice templates |
+| `search_land_registry` | Search UK Land Registry by address, title number, or postcode |
+| `check_planning_permission` | Check planning permission requirements for property modifications |
+| `explain_covenant` | Explain restrictive or positive covenants in plain English |
+| `calculate_sdlt` | Calculate Stamp Duty Land Tax for UK property purchases |
+| `draft_section_notice` | Generate a Section 21 or Section 8 notice template |
 | `check_right_of_way` | Analyze rights of way and easements with legal implications |
 
 ## Quick Start
 
 ```bash
 pip install mcp
+git clone https://github.com/CSOAI-ORG/landlaw-ai-mcp.git
+cd landlaw-ai-mcp
 python server.py
 ```
 
-## Configuration (Claude Desktop)
+## Claude Desktop Config
 
 ```json
 {
   "mcpServers": {
     "landlaw-ai": {
       "command": "python",
-      "args": ["/path/to/landlaw-ai-mcp/server.py"]
+      "args": ["server.py"],
+      "cwd": "/path/to/landlaw-ai-mcp"
     }
   }
 }
 ```
 
-## Domain Knowledge
+## Pricing
 
-- HM Land Registry title register structure (A/B/C sections)
-- SDLT rates including FTB relief, additional property surcharge, non-resident surcharge
-- GPDO 2015 permitted development rights
-- Law of Property Act 1925 (covenants, easements)
-- Housing Act 1988 (Section 21 and Section 8 notices)
-- Town and Country Planning Act 1990
-- Prescription Act 1832 (prescriptive rights)
+| Plan | Price | Requests |
+|------|-------|----------|
+| Free | $0/mo | 50 requests/month |
+| Pro | $19/mo | 5,000 requests/month |
 
-## License
+[Get on MCPize](https://mcpize.com/mcp/landlaw-ai)
 
-MIT - see [LICENSE](LICENSE)
+## Part of MEOK AI Labs
+
+This is one of 255+ MCP servers by MEOK AI Labs. Browse all at [meok.ai](https://meok.ai) or [GitHub](https://github.com/CSOAI-ORG).
 
 ---
-
-[landlaw.ai](https://landlaw.ai) | [MEOK AI Labs](https://meok.ai)
+**MEOK AI Labs** | [meok.ai](https://meok.ai) | nicholas@meok.ai | United Kingdom
