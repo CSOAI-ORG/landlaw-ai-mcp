@@ -4,12 +4,12 @@ build-backend = "hatchling.build"
 [project]
 name = "landlaw-ai-mcp"
 version = "1.0.0"
-description = "MEOK AI Labs — UK property law & Land Registry MCP Server"
+description = "MEOK AI Labs — UK property law research MCP Server"
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]
-keywords = ["mcp", "legal", "land-registry", "property", "conveyancing", "uk-law", "meok"]
+keywords = ["mcp", "property-law", "land-registry", "sdlt", "conveyancing", "uk", "meok"]
 dependencies = ["mcp>=1.0.0"]
 [project.urls]
 Homepage = "https://landlaw.ai"

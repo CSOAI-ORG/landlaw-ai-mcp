@@ -190,6 +190,24 @@ _PERMITTED_DEVELOPMENT = {
         "notes": "Full planning permission always required for new dwellings. Pre-application advice strongly recommended.",
         "legislation": "Town and Country Planning Act 1990, s.57",
     },
+    "conservatory": {
+        "description": "Conservatory (treated as single-storey rear extension)",
+        "permitted": True,
+        "max_dimensions": {
+            "detached": "8m depth (or 4m without prior approval), 4m height",
+            "semi_detached_terraced": "6m depth (or 3m without prior approval), 4m height",
+        },
+        "conditions": [
+            "Must not cover more than 50% of the garden/curtilage",
+            "Materials must be similar in appearance to existing dwelling",
+            "No verandas, balconies, or raised platforms",
+            "Not in front of the principal elevation",
+            "If floor area exceeds 30 sq m, Building Regulations approval required",
+            "If attached and over 30 sq m, must meet thermal separation requirements",
+        ],
+        "legislation": "GPDO 2015, Schedule 2, Part 1, Class A (same rules as single-storey rear extension)",
+        "exceptions": ["Listed buildings", "Conservation areas (restricted)", "Article 4 direction areas", "AONB", "National Parks"],
+    },
 }
 
 # ---------------------------------------------------------------------------
