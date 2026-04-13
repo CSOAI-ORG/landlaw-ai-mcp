@@ -1,0 +1,25 @@
+{
+  "name": "landlaw-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Built by MEOK AI Labs | https://landlaw.ai",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/landlaw-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "search_land_registry",
+    "check_planning_permission",
+    "explain_covenant",
+    "calculate_sdlt",
+    "draft_section_notice",
+    "check_right_of_way"
+  ],
+  "categories": [
+    "Legal",
+    "Real Estate"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}

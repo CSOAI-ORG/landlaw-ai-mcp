@@ -1,0 +1,10 @@
+name: landlaw-ai-mcp
+description: "MEOK AI Labs — Built by MEOK AI Labs | https://landlaw.ai"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/landlaw-ai-mcp
+license: MIT
+categories: [Legal, Real Estate]
+tags: [land-law, property-law, real-estate-law, conveyancing, planning-law]
+runtime: python
+entrypoint: server.py
