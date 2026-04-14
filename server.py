@@ -6,6 +6,11 @@ UK Land Registry searches, planning permission checks, covenant explanations,
 Stamp Duty calculations, Section 21/8 notices, and right of way analysis.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import re
 import time
 import uuid
@@ -296,7 +301,7 @@ _NOTICE_TYPES = {
 def search_land_registry(
     address: Optional[str] = None,
     title_number: Optional[str] = None,
-    postcode: Optional[str] = None) -> dict:
+    postcode: Optional[str] = None, api_key: str = "") -> dict:
     """Search UK Land Registry by address, title number, or postcode.
 
     Returns ownership details, tenure type, boundaries, restrictions, and
@@ -312,6 +317,10 @@ def search_land_registry(
     Returns:
         Land Registry information structure and access guidance.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade at https://landlaw.ai/pricing"}
 
@@ -388,7 +397,7 @@ def check_planning_permission(
     property_type: str = "detached",
     listed_building: bool = False,
     conservation_area: bool = False,
-    aonb: bool = False) -> dict:
+    aonb: bool = False, api_key: str = "") -> dict:
     """Check planning permission requirements for a property modification.
 
     Determines whether a proposed modification falls under permitted development
@@ -406,6 +415,10 @@ def check_planning_permission(
     Returns:
         Planning permission requirements, PD rights, conditions, and application guidance.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
 
@@ -483,7 +496,7 @@ def check_planning_permission(
 @mcp.tool()
 def explain_covenant(
     covenant_text: str,
-    covenant_type: Optional[str] = None) -> dict:
+    covenant_type: Optional[str] = None, api_key: str = "") -> dict:
     """Explain a restrictive or positive covenant in plain English.
 
     Takes the covenant wording (typically from a title register or deed)
@@ -497,6 +510,10 @@ def explain_covenant(
     Returns:
         Plain English explanation, enforceability analysis, and practical advice.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
 
@@ -601,7 +618,7 @@ def calculate_sdlt(
     first_time_buyer: bool = False,
     additional_property: bool = False,
     non_residential: bool = False,
-    non_uk_resident: bool = False) -> dict:
+    non_uk_resident: bool = False, api_key: str = "") -> dict:
     """Calculate Stamp Duty Land Tax for a UK property purchase.
 
     Applies current SDLT rates including first-time buyer relief,
@@ -619,6 +636,10 @@ def calculate_sdlt(
     Returns:
         SDLT calculation with band-by-band breakdown.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
 
@@ -712,7 +733,7 @@ def draft_section_notice(
     property_address: str,
     tenancy_start_date: str,
     grounds: Optional[list[str]] = None,
-    arrears_amount: Optional[float] = None) -> dict:
+    arrears_amount: Optional[float] = None, api_key: str = "") -> dict:
     """Generate a Section 21 or Section 8 notice template.
 
     Produces the required content and validates prerequisites. Note: use
@@ -731,6 +752,10 @@ def draft_section_notice(
     Returns:
         Notice template with all required fields and validity checks.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
 
@@ -862,7 +887,7 @@ def draft_section_notice(
 def check_right_of_way(
     description: str,
     right_type: Optional[str] = None,
-    registered: bool = True) -> dict:
+    registered: bool = True, api_key: str = "") -> dict:
     """Analyze a right of way or easement and explain its implications.
 
     Takes a description of a right of way or easement (from title register,
@@ -880,6 +905,10 @@ def check_right_of_way(
     Returns:
         Analysis of the right, its extent, enforceability, and practical implications.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
 
