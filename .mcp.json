@@ -10,16 +10,13 @@
         "type": "object",
         "properties": {
           "address": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "title_number": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "postcode": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           }
         },
         "required": []
@@ -62,8 +59,7 @@
             "type": "string"
           },
           "covenant_type": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           }
         },
         "required": [
@@ -120,15 +116,10 @@
             "type": "string"
           },
           "grounds": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
+            "type": "array"
           },
           "arrears_amount": {
-            "type": "number",
-            "nullable": true
+            "type": "number"
           }
         },
         "required": [
@@ -150,8 +141,7 @@
             "type": "string"
           },
           "right_type": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "registered": {
             "type": "boolean"

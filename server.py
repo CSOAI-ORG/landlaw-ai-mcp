@@ -19,8 +19,7 @@ from typing import Optional
 
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP(
-    "landlaw-ai")
+mcp = FastMCP("landlaw-ai", instructions="")
 
 # ---------------------------------------------------------------------------
 # Rate limiting
