@@ -1,5 +1,6 @@
 name: landlaw-ai-mcp
-description: "\x01"
+description: 'Landlaw Ai tools for AI agents. Capabilities: search land registry,
+  check planning permission, explain covenant. Built by MEOK AI Labs.'
 version: 1.0.0
 tools:
 - name: search_land_registry
