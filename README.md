@@ -1,59 +1,43 @@
-# LandLaw.AI MCP Server
+# LandLaw AI
 
-> **By [MEOK AI Labs](https://meok.ai)** — Sovereign AI tools for everyone.
+> By [MEOK AI Labs](https://meok.ai) — UK property law research, Land Registry, planning, and Stamp Duty
 
-UK property law research AI. Search the Land Registry, check planning permissions, explain covenants, calculate Stamp Duty, generate Section 21/8 notices, and analyze rights of way.
-
-[![MCPize](https://img.shields.io/badge/MCPize-Listed-blue)](https://mcpize.com/mcp/landlaw-ai)
-[![MIT License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-## Tools
-
-| Tool | Description |
-|------|-------------|
-| `search_land_registry` | Search UK Land Registry by address, title number, or postcode |
-| `check_planning_permission` | Check planning permission requirements for property modifications |
-| `explain_covenant` | Explain restrictive or positive covenants in plain English |
-| `calculate_sdlt` | Calculate Stamp Duty Land Tax for UK property purchases |
-| `draft_section_notice` | Generate a Section 21 or Section 8 notice template |
-| `check_right_of_way` | Analyze rights of way and easements with legal implications |
-
-## Quick Start
+## Installation
 
 ```bash
-pip install mcp
-git clone https://github.com/CSOAI-ORG/landlaw-ai-mcp.git
-cd landlaw-ai-mcp
+pip install landlaw-ai-mcp
+```
+
+## Usage
+
+```bash
 python server.py
 ```
 
-## Claude Desktop Config
+## Tools
 
-```json
-{
-  "mcpServers": {
-    "landlaw-ai": {
-      "command": "python",
-      "args": ["server.py"],
-      "cwd": "/path/to/landlaw-ai-mcp"
-    }
-  }
-}
-```
+### `search_title`
+Search UK Land Registry title records by property address or title number.
 
-## Pricing
+### `check_planning`
+Check planning permission status and local authority requirements.
 
-| Plan | Price | Requests |
-|------|-------|----------|
-| Free | $0/mo | 50 requests/month |
-| Pro | $19/mo | 5,000 requests/month |
+### `explain_covenant`
+Explain restrictive covenants and their implications for property use.
 
-[Get on MCPize](https://mcpize.com/mcp/landlaw-ai)
+### `calculate_sdlt`
+Calculate UK Stamp Duty Land Tax for residential, commercial, and additional properties. Covers first-time buyer relief and current 2025 rates.
 
-## Part of MEOK AI Labs
+### `section_notice`
+Generate Section 21 or Section 8 notice templates for landlords.
 
-This is one of 255+ MCP servers by MEOK AI Labs. Browse all at [meok.ai](https://meok.ai) or [GitHub](https://github.com/CSOAI-ORG).
+### `right_of_way`
+Analyze rights of way and easements affecting a property.
 
----
-**MEOK AI Labs** | [meok.ai](https://meok.ai) | nicholas@meok.ai | United Kingdom
+## Authentication
+
+Free tier: 60 requests/hour. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+
+## License
+
+MIT — MEOK AI Labs
