@@ -1,43 +1,38 @@
-# LandLaw AI
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — UK property law research, Land Registry, planning, and Stamp Duty
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/landlaw-ai-mcp)](https://github.com/CSOAI-ORG/landlaw-ai-mcp/stargazers)
+
+# ulandlawU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/landlaw-ai-mcp)](https://www.npmjs.com/package/@meok-ai/landlaw-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/landlaw-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install landlaw-ai-mcp
+# or
+npm install -g @meok-ai/landlaw-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `search_title`
-Search UK Land Registry title records by property address or title number.
-
-### `check_planning`
-Check planning permission status and local authority requirements.
-
-### `explain_covenant`
-Explain restrictive covenants and their implications for property use.
-
-### `calculate_sdlt`
-Calculate UK Stamp Duty Land Tax for residential, commercial, and additional properties. Covers first-time buyer relief and current 2025 rates.
-
-### `section_notice`
-Generate Section 21 or Section 8 notice templates for landlords.
-
-### `right_of_way`
-Analyze rights of way and easements affecting a property.
-
-## Authentication
-
-Free tier: 60 requests/hour. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
