@@ -1,45 +1,64 @@
-[![landlaw-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/landlaw-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/landlaw-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/landlaw-ai-mcp)](https://pypi.org/project/landlaw-ai-mcp/)
-
-[![landlaw-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/landlaw-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/landlaw-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/landlaw-ai-mcp)](https://github.com/CSOAI-ORG/landlaw-ai-mcp/stargazers)
+# Landlaw Ai MCP
 
-# ulandlawU aiU mcp
+**LandLaw.AI MCP Server - UK Property Law Research**
 
-****
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/landlaw-ai-mcp)](https://www.npmjs.com/package/@meok-ai/landlaw-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-landlaw-ai-mcp)](https://pypi.org/project/meok-landlaw-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/landlaw-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+LandLaw.AI MCP Server - UK Property Law Research
+Built by MEOK AI Labs | https://landlaw.ai
+
+UK Land Registry searches, planning permission checks, covenant explanations,
+Stamp Duty calculations, Section 21/8 notices, and right of way analysis.
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `search_land_registry` | Search UK Land Registry by address, title number, or postcode. |
+| `check_planning_permission` | Check planning permission requirements for a property modification. |
+| `explain_covenant` | Explain a restrictive or positive covenant in plain English. |
+| `calculate_sdlt` | Calculate Stamp Duty Land Tax for a UK property purchase. |
+| `draft_section_notice` | Generate a Section 21 or Section 8 notice template. |
+| `check_right_of_way` | Analyze a right of way or easement and explain its implications. |
 
 ## Installation
 
 ```bash
-pip install landlaw-ai-mcp
-# or
-npm install -g @meok-ai/landlaw-ai-mcp
+pip install meok-landlaw-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "landlaw-ai": {
+      "command": "python",
+      "args": ["-m", "meok_landlaw_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 6 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/landlaw-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
