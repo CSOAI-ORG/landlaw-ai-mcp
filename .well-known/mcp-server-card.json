@@ -1,0 +1,31 @@
+{
+  "name": "landlaw-ai-mcp",
+  "title": "Landlaw Ai Mcp",
+  "description": "Landlaw Ai tools for AI agents. Capabilities: search land registry, check planning permission, explain covenant. Built by MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "search_land_registry"
+    },
+    {
+      "name": "check_planning_permission"
+    },
+    {
+      "name": "explain_covenant"
+    },
+    {
+      "name": "calculate_sdlt"
+    },
+    {
+      "name": "draft_section_notice"
+    },
+    {
+      "name": "check_right_of_way"
+    }
+  ]
+}

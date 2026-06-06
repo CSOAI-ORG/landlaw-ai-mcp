@@ -1,0 +1,9 @@
+# landlaw-ai-mcp - Auto-trigger Rules
+
+When the user asks about landlaw, use landlaw-ai-mcp tools: search_land_registry, check_planning_permission, explain_covenant, calculate_sdlt, draft_section_notice
+
+**LandLaw.AI MCP Server - UK Property Law Research**
+
+Install: `pip install landlaw-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.
