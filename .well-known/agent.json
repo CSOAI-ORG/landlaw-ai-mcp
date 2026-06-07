@@ -1,0 +1,77 @@
+{
+  "name": "landlaw-ai-mcp",
+  "description": "Landlaw Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/landlaw-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "search_land_registry",
+      "name": "Search Land Registry",
+      "description": "search_land_registry via landlaw-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_planning_permission",
+      "name": "Check Planning Permission",
+      "description": "check_planning_permission via landlaw-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "explain_covenant",
+      "name": "Explain Covenant",
+      "description": "explain_covenant via landlaw-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "calculate_sdlt",
+      "name": "Calculate Sdlt",
+      "description": "calculate_sdlt via landlaw-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "draft_section_notice",
+      "name": "Draft Section Notice",
+      "description": "draft_section_notice via landlaw-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_right_of_way",
+      "name": "Check Right Of Way",
+      "description": "check_right_of_way via landlaw-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
