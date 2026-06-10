@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "landlaw-ai-mcp"
-version = "1.0.6"
+version = "1.0.7"
 readme = "README.md"
 description = "Landlaw Ai tools for AI agents. Capabilities: search land registry, check planning permission, explain covenant. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
